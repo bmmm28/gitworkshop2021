@@ -2,6 +2,24 @@
   <div id="test" class="tmp2">
       <br />
 
+
+<!-- เปลี่ยนสีพื้นหลัง -->
+    <div class="input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Color</span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing Example Input"
+        v-model="colorBG"
+      />
+    </div>
+    <div v-bind:style="{ background: colorBG, fontSize: fontSize + 'px' }">color : {{ colorBG }} </div>
+    <br />
+    <br />
+
+
 <!-- input v-model -->
     <div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm">User</span>
@@ -76,6 +94,7 @@ export default {
 
             userName : null,
             userpass: null,
+            colorBG : null,
 
             }
         },
